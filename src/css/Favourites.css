@@ -32,6 +32,15 @@
   font-size: 1.2rem;
   line-height: 1.6;
 }
+.favorite-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.favorite-icon.active {
+  color: red;
+}
+
 
 
 /* Animation for new favorites being added */

@@ -1,9 +1,11 @@
 import "../css/MovieCard.css";
 import { useMovieContext } from "../context/MovieContext";
+import { FaHeart } from "react-icons/fa";
+
 
 function MovieCard({ movie }) {
   const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext();
-  const favorite = isFavorite(movie.id); // check if already favorite
+  const favorite = isFavorite(movie.id);
 
   const onFavouriteClick = (e) => {
     e.preventDefault();
@@ -26,7 +28,8 @@ function MovieCard({ movie }) {
             className={`favorite-btn ${favorite ? "active" : ""}`}
             onClick={onFavouriteClick}
           >
-            ❤️
+            <FaHeart className={`favorite-icon ${favorite ? "active" : ""}`} />
+            
           </button>
         </div>
       </div>
